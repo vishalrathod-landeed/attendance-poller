@@ -181,7 +181,7 @@ def poll_once(state):
             continue
         when = f"*{ptime}* — {pdate}" if ptime else f"*{stamp}*"
         if not too_many:
-            if post_to_slack(f"🟢 *{name}* punched in at {when}"):
+            if post_to_slack(f"🟡 *{name}* punched in at {when}"):
                 seen.add(key)
                 state["seen"].append(key)
                 changed = True
